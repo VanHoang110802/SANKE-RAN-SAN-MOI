@@ -64,14 +64,6 @@ void XoaManHinh()
     SetConsoleCursorPosition(hOut, Position);
 }
 
-// hàm kiểm soát nhịp game:
-void DeLay(int ms)
-{
-    clock_t start_time = clock();
-    while (clock() < start_time + ms)
-        ;
-}
-
 void HoanVi(int &a, int &b)
 {
     int temp = a;
