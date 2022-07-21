@@ -12,7 +12,7 @@
 // dx, dy = 3 -> con rắn hướng sang phải
 // dx, dy = 4 -> con rắn hướng sang trái
 const int dx[4] = {-1, 1, 0, 0};
-const int dy[4] = {0, 0, 1, 1};
+const int dy[4] = {0, 0, -1, 1};
 
 struct TOADO
 {
@@ -35,7 +35,10 @@ void gotoxy(int x1, int y1)
     hConsoleOutput = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleCursorPosition(hConsoleOutput, Cursor_an_Pos);
 }
-
+void DeLay(int x)
+{
+    Sleep(x);
+}
 // hàm ẩn con trỏ nháy:
 void AnConTroDi()
 {
